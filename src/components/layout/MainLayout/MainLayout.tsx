@@ -9,10 +9,20 @@ const { Sider, Footer } = Layout;
 export const MainLayout = () => {
   return (
     <Layout>
-      <Sider width={250}>
+      <Sider
+        width={250}
+        style={{
+          overflow: 'auto',
+          height: '100vh',
+          position: 'fixed',
+          left: 0,
+          top: 0,
+          bottom: 0,
+        }}
+      >
         <Navbar />
       </Sider>
-      <Layout>
+      <Layout style={{ marginLeft: '250px' }}>
         <S.Content>
           <Outlet />
         </S.Content>

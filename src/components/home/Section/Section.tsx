@@ -14,7 +14,7 @@ interface SectionProps {
 export const Section: React.FC<SectionProps> = ({ title, link, children }) => {
   return (
     <S.Wrapper>
-      <Row justify="space-between">
+      <Row justify="space-between" align="middle">
         <Title level={2}>{title}</Title>
         {link && (
           <S.ShowMore>

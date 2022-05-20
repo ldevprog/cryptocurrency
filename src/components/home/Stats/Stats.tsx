@@ -6,7 +6,7 @@ import { useGetCryptosQuery } from '../../../services/CryptoAPI';
 import { Spinner } from '../../common/Spinner/Spinner';
 
 export const Stats = () => {
-  const { data, isLoading } = useGetCryptosQuery('');
+  const { data, isLoading } = useGetCryptosQuery(10);
 
   if (isLoading) return <Spinner />;
 
