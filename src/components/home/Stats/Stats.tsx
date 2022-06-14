@@ -1,7 +1,7 @@
 import { Row, Col, Statistic } from 'antd';
 import millify from 'millify';
 
-import { useGetCryptosQuery } from '../../../services/CryptoAPI';
+import { useGetCryptosQuery } from '../../../services/cryptoApi';
 
 import { Spinner } from '../../common/Spinner/Spinner';
 

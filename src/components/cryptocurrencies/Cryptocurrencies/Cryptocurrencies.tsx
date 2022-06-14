@@ -4,7 +4,7 @@ import { Col, Card, Image, Input, Row } from 'antd';
 import millify from 'millify';
 
 import { ICrypto } from '../../../interfaces/ICrypto';
-import { useGetCryptosQuery } from '../../../services/CryptoAPI';
+import { useGetCryptosQuery } from '../../../services/cryptoApi';
 
 import { Spinner } from '../../common/Spinner/Spinner';
 import * as S from './Cryptocurrencies.styles';
@@ -35,22 +35,24 @@ export const Cryptocurrencies: React.FC<CryptocurrenciesProps> = ({
 
   if (isLoading) return <Spinner />;
 
+  console.log(cryptosList);
+
   return (
     <>
       {!simplified && (
-        <Row justify="center">
+        <S.SearchWrapper justify="center">
           <Input
             style={{ width: 300 }}
             size="large"
             placeholder="search cryptocurrency"
             onChange={searchTermHandler}
           />
-        </Row>
+        </S.SearchWrapper>
       )}
       <S.CardGrid gutter={[25, 25]}>
         {cryptos?.map((crypto) => (
           <Col xs={24} sm={12} lg={6}>
-            <Link to={`crypto/${crypto.uuid}`}>
+            <Link to={`crypto/${crypto.rank}`}>
               <Card
                 style={{ borderRadius: '10px' }}
                 title={`${crypto.rank}. ${crypto.name}`}

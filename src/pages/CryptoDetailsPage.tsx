@@ -1,6 +1,4 @@
 const CryptoDetailsPage = () => {
-  console.log('cryptodetail');
-
   return <div>CryptoDetailsPage</div>;
 };
 

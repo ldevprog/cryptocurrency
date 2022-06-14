@@ -16,7 +16,7 @@ export const Home = () => {
         <Cryptocurrencies simplified />
       </Section>
       <Section title="Latest Crypto News" link="/news">
-        <News />
+        <News simplified />
       </Section>
     </>
   );

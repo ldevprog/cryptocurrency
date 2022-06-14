@@ -11,6 +11,7 @@ export const Wrapper = styled(Row)`
 export const Logo = styled(Row)`
   width: 100%;
   padding: 0 5px;
+  margin-bottom: 15px;
 `;
 
 export const Title = styled(Typography.Title)`
