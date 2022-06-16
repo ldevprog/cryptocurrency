@@ -14,5 +14,8 @@ export const BottomLayout = styled(Layout)`
 
 export const Content = styled(Layout.Content)`
   padding: 20px;
-  margin-top: 75px;
+
+  @media screen and (max-width: 992px) {
+    margin-top: 75px;
+  }
 `;

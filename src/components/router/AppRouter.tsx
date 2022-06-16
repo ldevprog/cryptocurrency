@@ -4,7 +4,6 @@ import { Spinner } from '../common/Spinner/Spinner';
 import { MainLayout } from '../layout/MainLayout/MainLayout';
 
 const HomePage = lazy(() => import('../../pages/HomePage'));
-const ExchangesPage = lazy(() => import('../../pages/ExchangesPage'));
 const CryptocurrenciesPage = lazy(
   () => import('../../pages/CryptocurrenciesPage')
 );
@@ -18,7 +17,6 @@ export const AppRouter = () => {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="exchanges" element={<ExchangesPage />} />
             <Route path="cryptocurrencies" element={<CryptocurrenciesPage />} />
             <Route path="crypto/:coinId" element={<CryptoDetailsPage />} />
             <Route path="news" element={<NewsPage />} />
