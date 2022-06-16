@@ -1,5 +1,7 @@
+import { Exchanges } from '../components/exchanges/Exchanges';
+
 const ExchangesPage = () => {
-  return <div>ExchangesPage</div>;
+  return <Exchanges />;
 };
 
 export default ExchangesPage;

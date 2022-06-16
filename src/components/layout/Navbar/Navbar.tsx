@@ -1,24 +1,21 @@
 import { Link } from 'react-router-dom';
-import { Avatar, Typography, Menu, Row, Col } from 'antd';
-
+import { Menu } from 'antd';
 import {
   BulbOutlined,
   FundOutlined,
   HomeOutlined,
   MoneyCollectOutlined,
 } from '@ant-design/icons';
-import icon from '../../../assets/images/logo.png';
+
 import * as S from './Navbar.styles';
+import { Logo } from '../../common/Logo/Logo';
 
 export const Navbar = () => {
   return (
     <S.Wrapper justify="space-between" align="middle">
-      <S.Logo justify="space-between" align="middle">
-        <Avatar src={icon} size="large" />
-        <S.Title level={2}>
-          <Link to="/">Cryptoverse</Link>
-        </S.Title>
-      </S.Logo>
+      <S.OnlyBigScreen>
+        <Logo />
+      </S.OnlyBigScreen>
 
       <S.Menu theme="dark">
         <Menu.Item icon={<HomeOutlined />}>

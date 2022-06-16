@@ -31,13 +31,12 @@ export const News: React.FC<NewsProps> = ({ simplified }) => {
 
   if (isLoading || !cryptoNews?.value) return <Spinner />;
 
-  console.log(cryptoNews);
-
   return (
     <S.Wrapper gutter={[20, 25]} justify="space-between" align="top">
       {!simplified && (
         <Col span={24}>
           <Select
+            style={{ width: '200px' }}
             placeholder="Select a Crypto"
             showSearch
             optionFilterProp="children"
@@ -48,7 +47,9 @@ export const News: React.FC<NewsProps> = ({ simplified }) => {
           >
             <Option value="Cryptocurrency">Cryptocurrency</Option>
             {data?.data?.coins.map((coin: ICrypto) => (
-              <Option value={coin.name}>{coin.name}</Option>
+              <Option key={coin.name} value={coin.name}>
+                {coin.name}
+              </Option>
             ))}
           </Select>
         </Col>

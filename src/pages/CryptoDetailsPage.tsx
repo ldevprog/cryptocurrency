@@ -1,5 +1,7 @@
+import { CryptoDetails } from '../components/crypto-details/CryptoDetails/CryptoDetails';
+
 const CryptoDetailsPage = () => {
-  return <div>CryptoDetailsPage</div>;
+  return <CryptoDetails />;
 };
 
 export default CryptoDetailsPage;

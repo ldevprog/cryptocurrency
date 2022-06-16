@@ -3,19 +3,13 @@ import styled from 'styled-components';
 
 export const Wrapper = styled(Row)`
   padding: 10px;
-  a {
-    color: #fff;
+`;
+
+export const OnlyBigScreen = styled.div`
+  display: none;
+  @media screen and (min-width: 992px) {
+    display: block;
   }
-`;
-
-export const Logo = styled(Row)`
-  width: 100%;
-  padding: 0 5px;
-  margin-bottom: 15px;
-`;
-
-export const Title = styled(Typography.Title)`
-  margin: 0 !important;
 `;
 
 export const Menu = styled(AntMenu)`

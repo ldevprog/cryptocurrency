@@ -35,12 +35,10 @@ export const Cryptocurrencies: React.FC<CryptocurrenciesProps> = ({
 
   if (isLoading) return <Spinner />;
 
-  console.log(cryptosList);
-
   return (
     <>
       {!simplified && (
-        <S.SearchWrapper justify="center">
+        <S.SearchWrapper>
           <Input
             style={{ width: 300 }}
             size="large"
@@ -52,7 +50,7 @@ export const Cryptocurrencies: React.FC<CryptocurrenciesProps> = ({
       <S.CardGrid gutter={[25, 25]}>
         {cryptos?.map((crypto) => (
           <Col xs={24} sm={12} lg={6}>
-            <Link to={`crypto/${crypto.rank}`}>
+            <Link to={`/crypto/${crypto.uuid}`}>
               <Card
                 style={{ borderRadius: '10px' }}
                 title={`${crypto.rank}. ${crypto.name}`}
