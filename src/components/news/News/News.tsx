@@ -41,9 +41,6 @@ export const News: React.FC<NewsProps> = ({ simplified }) => {
             showSearch
             optionFilterProp="children"
             onChange={(value) => setNewsCategory(value)}
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
           >
             <Option value="Cryptocurrency">Cryptocurrency</Option>
             {data?.data?.coins.map((coin: ICrypto) => (
